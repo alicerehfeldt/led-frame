@@ -91,9 +91,8 @@ def sailorMoonClips():
     randomPlay(path)
 
 def sailorMoonEpisodes():
-    path = '/home/pi/sm/*.mp4'
+    path = '/home/pi/episodes/*.mp4'
     sequentialPlay(path)
-
 
 try:
     screen = blackScreen()
