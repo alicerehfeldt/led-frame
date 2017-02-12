@@ -115,8 +115,8 @@ def playEverything():
     while True:
       sailorMoonClips()
       sailorMoonEpisodes()
-    except BlackScreenException:
-      return
+  except BlackScreenException:
+    return
 
 def sleepMode():
   blackScreen()
