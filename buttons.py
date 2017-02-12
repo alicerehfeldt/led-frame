@@ -5,6 +5,7 @@ import time
 EVENT = False
 
 def getEvent():
+    global EVENT
     last_event = EVENT
     EVENT = False
     return last_event
@@ -12,12 +13,15 @@ def getEvent():
 
 
 def redButtonPressed(channel):
+    global EVENT
     EVENT = 'RED'
 
 def yellowButtonPressed(channel):
+    global EVENT
     EVENT = 'YELLOW'
 
-def blueButtonPressed(channel): 
+def blueButtonPressed(channel):
+    global EVENT
     EVENT = 'BLUE'
 
 def init():

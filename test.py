@@ -10,6 +10,6 @@ while True:
     print "Red pressed!"
   elif (event == "BLUE"):
     print "Blue pressed!"
-  else (event == "YELLOW"):
+  elif (event == "YELLOW"):
     print "Yellow pressed!"
   time.sleep(0.2)
