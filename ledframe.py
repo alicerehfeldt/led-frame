@@ -64,6 +64,7 @@ def playMovie(movie):
         stopMovie(child)
         return True
       time.sleep(0.1)
+    time.sleep(2)
     return True
   except BlackScreenException:
     stopMovie(child)
@@ -77,7 +78,6 @@ def playMovies(movies):
     playNext = playMovie(movie)
     if not playNext:
       return False
-    time.sleep(2)
   return True
 
 def sequentialPlay(path):
