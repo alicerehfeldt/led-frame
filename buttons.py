@@ -25,8 +25,8 @@ def blueButtonPressed(channel):
     EVENT = 'BLUE'
 
 def init():
-    RED_BUTTON = 24
-    YELLOW_BUTTON = 25
+    RED_BUTTON = 25
+    YELLOW_BUTTON = 24
     BLUE_BUTTON = 19
     buttons = [RED_BUTTON, YELLOW_BUTTON, BLUE_BUTTON]
 
