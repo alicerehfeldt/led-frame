@@ -10,18 +10,19 @@ def getEvent():
     EVENT = False
     return last_event
 
-
-
 def redButtonPressed(channel):
     global EVENT
+    print "RED BUTTON PRESSED"
     EVENT = 'RED'
 
 def yellowButtonPressed(channel):
     global EVENT
+    print "YELLOW BUTTON PRESSED"
     EVENT = 'YELLOW'
 
 def blueButtonPressed(channel):
     global EVENT
+    print "BLUE BUTTON PRESSED"
     EVENT = 'BLUE'
 
 def init():

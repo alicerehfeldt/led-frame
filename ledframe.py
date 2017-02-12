@@ -52,11 +52,14 @@ def playMovie(movie):
 
       # Button Events
       event = buttons.getEvent()
+      # RED = black screen
       if (event == "RED"):
         raise BlackScreenException()
+      # BLUE = mode skip
       elif (event == "BLUE"):
         stopMovie(child)
         return False
+      # YELLOW = movie skip
       elif (event == "YELLOW"):
         stopMovie(child)
         return True
@@ -72,7 +75,7 @@ def playMovie(movie):
 def playMovies(movies):
   for movie in movies:
     playNext = playMovie(movie)
-    if (not playNext):
+    if not playNext:
       return False
     time.sleep(2)
   return True
@@ -82,7 +85,7 @@ def sequentialPlay(path):
   movies.sort()
   while True:
     keepPlaying = playMovies(movies)
-    if (not keepPlaying):
+    if not keepPlaying:
       return
 
 def randomPlay(path):
@@ -90,7 +93,7 @@ def randomPlay(path):
   while True:
     random.shuffle(movies)
     keepPlaying = playMovies(movies)
-    if (not keepPlaying):
+    if not keepPlaying:
       return
 
 def done():
@@ -107,17 +110,30 @@ def sailorMoonEpisodes():
   path = '/home/pi/episodes/*.mp4'
   sequentialPlay(path)
 
+def playEverything():
+  try:
+    while True:
+      sailorMoonClips()
+      sailorMoonEpisodes()
+    except BlackScreenException:
+      return
+
+def sleepMode():
+  blackScreen()
+  while True:
+    time.sleep(0.1)
+    # Button Events
+    event = buttons.getEvent()
+    # RED = black screen
+    if (event == "RED"):
+        return
 
 try:
   buttons.init()
   screen = blackScreen()
   while True:
-    sailorMoonClips()
-    sailorMoonEpisodes()
-
-except BlackScreenException:
-  done()
-
+    playEverything()
+    sleepMode()
 except KeyboardInterrupt:
   print "ctrl+c"
   done()
