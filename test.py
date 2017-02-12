@@ -5,7 +5,7 @@ import time
 buttons.init()
 
 while True:
-  let event = buttons.getEvent()
+  event = buttons.getEvent()
   if (event == "RED"):
     print "Red pressed!"
   elif (event == "BLUE"):
