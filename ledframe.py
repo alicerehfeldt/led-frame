@@ -101,10 +101,6 @@ def done():
   pygame.quit()
   sys.exit(0)
 
-def poppyVideos():
-  path = '/home/pi/poppy/*.mp4'
-  randomPlay(path)
-
 def sailorMoonClips():
   path = '/home/pi/sm/*.mp4'
   randomPlay(path)
