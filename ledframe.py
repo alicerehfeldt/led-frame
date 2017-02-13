@@ -102,11 +102,11 @@ def done():
   sys.exit(0)
 
 def sailorMoonClips():
-  path = '/home/pi/sm/*.mp4'
+  path = '/home/pi/videos/sailor_moon_clips/*.mp4'
   randomPlay(path)
 
 def sailorMoonEpisodes():
-  path = '/home/pi/episodes/*.mp4'
+  path = '/home/pi/videos/sailor_moon_episodes/*.mp4'
   sequentialPlay(path)
 
 def playEverything():
