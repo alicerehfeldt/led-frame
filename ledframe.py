@@ -114,7 +114,6 @@ def playEverything():
     while True:
       sailorMoonClips()
       sailorMoonEpisodes()
-      poppyVideos()
   except BlackScreenException:
     return
 
